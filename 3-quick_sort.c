@@ -8,20 +8,21 @@
 void swap(int *v1, int *v2)
 {
 	int temp;
-	
+
 	temp = *v1;
 	*v1 = *v2;
 	*v2 = temp;
 }
 
 /**
- *  partition - A funcion that takes last elements as pivot places the
+ * lomuto_part - A funcion that takes last elements as pivot places the
  *		pivot element at its correct position in the sorted array,
  *		and places all smaller (smaller than pivot) to left of pivot
  *		and all greater elements to right of pivot.
  * @array: Array to be sorted
- * @low: lower side of pivot
- * @high: higher side of pivot
+ * @size: size of the array
+ * @left: left side of pivot
+ * @right: right side of pivot
  * Return: Partition
  */
 int lomuto_part(int *array, size_t size, int left, int right)
